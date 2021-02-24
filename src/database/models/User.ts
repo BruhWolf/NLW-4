@@ -1,5 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import {v4 as uuid} from 'uuid'
+
 @Entity("Users")
 class User {
     @PrimaryColumn()
@@ -12,7 +13,7 @@ class User {
     email: string
     
     @CreateDateColumn()
-    created_at: string
+    created_at: Date
 
     constructor(){
         if(!this.id){
